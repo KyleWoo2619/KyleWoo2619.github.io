@@ -57,6 +57,24 @@
 
     footer{padding:26px 0;border-top:1px solid rgba(255,255,255,.06);color:var(--muted);font-size:.92rem}
     .social{display:flex;gap:14px}
+    #topBtn {
+      transition: opacity 0.2s;
+      opacity: 0.85;
+    }
+    #topBtn:hover {
+      opacity: 1;
+    }
+    @media (max-width:600px) {
+      #topBtn {
+        right: 16px;
+        bottom: 16px;
+        padding: 10px 14px;
+        font-size: 1rem;
+      }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 <body>
@@ -65,44 +83,68 @@
       <nav>
         <div class="brand">Kyle Woo</div>
         <ul>
-          <li><a href="#work">Work</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero" id="top">
-    <div class="container wrap">
-      <div>
-        <div class="eyebrow">Game Design • Production • UI/UX</div>
-        <h1>Hi, I’m <span style="color:var(--acc)">Kyle Woo</span> — a game designer & producer who loves clean systems, clear schedules, and dramatic boss fights.</h1>
-        <p class="lead">Unity & Unreal projects with a focus on player‑friendly UI, narrative beats, and reliable pipelines. Currently studying at UCF; building polished small‑scope experiences.</p>
-        <div class="tags">
-          <span class="tag">Unity (C#)</span><span class="tag">Unreal / Blueprints</span><span class="tag">Jira / Scrum</span><span class="tag">Shader Graph</span><span class="tag">Cinematics</span>
-        </div>
-        <div class="cta">
-          <a class="btn" href="#work">See Projects</a>
-          <a class="btn ghost" href="https://github.com/KyleWoo2619" target="_blank" rel="noopener">GitHub</a>
-        </div>
+  <section class="hero" id="top" style="padding:0;margin:0;">
+    <!-- Banner -->
+    <div style="width:100%;background:linear-gradient(90deg,#60a5fa 0%,#f59e0b 100%);padding:64px 0 64px 0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+      <h1 style="font-size:3.6rem;font-weight:900;letter-spacing:1px;color:#fff;margin:0 0 18px 0;text-shadow:0 2px 24px rgba(0,0,0,.18);text-align:center;">Kyle Woo</h1>
+      <div style="font-size:1.45rem;color:#fff;font-weight:600;text-align:center;max-width:600px;margin-bottom:18px;text-shadow:0 2px 12px rgba(0,0,0,.10);">
+        Ambitious Producer & Game Designer
       </div>
-      <div>
-        <div class="panel" style="padding:22px">
-          <strong>Quick highlights</strong>
+      <div style="font-size:1.08rem;color:#f3f4f6;text-align:center;max-width:700px;margin-bottom:0 0 46px 0;">
+        Building polished, player-focused experiences with a love for clean systems, clear schedules, and dramatic boss fights.
+      </div>
+    </div>
+    <!-- Add About Section Anchor -->
+    <span id="about"></span>
+    <!-- Centered About Section -->
+    <div class="container" style="display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:90px;">
+      <div style="max-width:600px;text-align:center;">
+        <h2 style="margin-bottom:16px;">About</h2>
+        <p>I’m a junior game design student at UCF who enjoys building clear production plans and approachable game loops. I like small, well‑scoped projects that ship.</p>
+        <p>Beyond design, I focus on pipelines: task breakdowns in Jira, clean Gantt timelines, and version‑control‑friendly workflows so teams don’t step on each other.</p>
+        <p style="margin-bottom:22px;"><strong>Currently</strong> refining the post‑tutorial flow for <em>Horizon Angler</em> (shop scene, cutscene transitions, and boss setup).</p>
+        <p style="margin-top:32px;">
+          <a class="btn ghost" href="#" id="resumeBtn" style="display:inline-block;margin:0 auto;">Download my Résumé (PDF)</a>
+        </p>
+      </div>
+    </div>
+    <!-- Quick Highlights and Skills/Tools side by side, no borders -->
+    <div class="container" style="margin-top:38px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:38px;max-width:1100px;margin:0 auto;">
+        <div>
+          <h2 style="margin-bottom:16px;">Quick Highlights</h2>
           <ul>
-            <li>Producer/Director on <em>Horizon Angler</em> — a mystery fishing adventure with multi‑stage boss logic & save/progress systems.</li>
-            <li>Built UI flows, NPC interactions, shop systems, and cutscene transitions.</li>
-            <li>Experimented with water & light shaders reacting to player direction.</li>
+            <li>Unity & Unreal projects with a focus on player‑friendly UI, narrative beats, and reliable pipelines.</li>
+            <li>Task breakdowns in Jira, clean Gantt timelines, and version‑control‑friendly workflows.</li>
+            <li>Currently refining the post‑tutorial flow for <em>Horizon Angler</em> (shop scene, cutscene transitions, and boss setup).</li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="margin-bottom:16px;">Skills & Tools</h2>
+          <ul>
+            <li><strong>Design:</strong> Systems, level flow, combat feel, narrative beats</li>
+            <li><strong>Production:</strong> Scrum, Jira, scope control, milestone planning</li>
+            <li><strong>Tech:</strong> Unity (C#), Unreal (Blueprints), Shader Graph, GitHub</li>
+            <li><strong>Art/UX:</strong> UI wireframes, layout, Photoshop, Illustrator</li>
           </ul>
         </div>
       </div>
     </div>
-  </section>
 
-  <section id="work">
+  <section id="projects">
+    <!-- Spacer to prevent header overlap when navigating -->
+    <div style="height:45px;"></div>
+    <span id="projects"></span>
     <div class="container">
-      <h2>Selected Work</h2>
+      <h2>Proud Projects</h2>
       <div class="grid">
         <!-- Project 1 -->
         <article class="card">
@@ -141,42 +183,57 @@
     </div>
   </section>
 
-  <section id="about">
-    <div class="container about">
-      <div class="panel">
-        <h2>About</h2>
-        <p>I’m a junior game design student at UCF who enjoys building clear production plans and approachable game loops. I like small, well‑scoped projects that ship.</p>
-        <p>Beyond design, I focus on pipelines: task breakdowns in Jira, clean Gantt timelines, and version‑control‑friendly workflows so teams don’t step on each other.</p>
-        <p><strong>Currently</strong> refining the post‑tutorial flow for <em>Horizon Angler</em> (shop scene, cutscene transitions, and boss setup).</p>
-        <p><a class="btn ghost" href="#" download>Download résumé (PDF)</a></p>
-      </div>
-      <div class="panel">
-        <h2>Skills & Tools</h2>
-        <ul>
-          <li><strong>Design:</strong> Systems, level flow, combat feel, narrative beats</li>
-          <li><strong>Production:</strong> Scrum, Jira, scope control, milestone planning</li>
-          <li><strong>Tech:</strong> Unity (C#), Unreal (Blueprints), Shader Graph, GitHub</li>
-          <li><strong>Art/UX:</strong> UI wireframes, layout, Photoshop, Illustrator</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
   <section id="contact">
     <div class="container contact">
       <div class="panel">
         <h2>Contact</h2>
-        <p>Want to collaborate or chat about a project? Email me and I’ll get back soon.</p>
+        <p style="margin-bottom:22px;">Want to collaborate or chat about a project? Email me and I’ll get back soon.</p>
         <p> 
-          <a class="btn" href="mailto:wkhgate2619@gmail.com">wkhgate2619@gmail.com</a></p>
-          <a class="btn" href="tel:+13526424282">+1 (352) 642-4282</a>
+          <a class="btn" href="mailto:wkhgate2619@gmail.com">wkhgate2619@gmail.com</a>
+          <span style="display:inline-block;width:8px;"></span>
+        </p>
       </div>
       <div class="panel">
         <h2>Links</h2>
-        <div class="social">
-          <a href="https://github.com/KyleWoo2619" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/kanghyeon-woo-92610623b/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="#top">Back to top ↑</a>
+        <div class="social" style="gap:28px;">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <a href="https://github.com/KyleWoo2619" target="_blank" rel="noopener" style="display:block;">
+              <!-- GitHub SVG Icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" style="margin-bottom:4px;">
+                <path fill="#9aa4b2" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.36 6.84 9.72.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.17-1.11-1.48-1.11-1.48-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05 .89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.38 9.38 0 0 1 2.5-.34c.85 0 1.71.11 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05 .55 1.42.2 2.47.1 2.73 .64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07 .36.32.68.94.68 1.89 0 1.36-.01 2.46-.01 2.8 0 .27.18.58.69.48C19.13 20.62 22 16.78 22 12.26 22 6.58 17.52 2 12 2z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/KyleWoo2619" target="_blank" rel="noopener">GitHub</a>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <a href="https://www.linkedin.com/in/kanghyeon-woo-92610623b/" target="_blank" rel="noopener" style="display:block;">
+              <!-- LinkedIn SVG Icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" style="margin-bottom:4px;">
+                <path fill="#0A66C2" d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-9.5 16V10H6v9h3.5zm-1.75-10.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zM18 19v-4.5c0-2.21-2.79-2.04-2.79 0V19H12.5V10H15v1.09c.69-1.25 4-1.34 4 1.19V19h-1z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/kanghyeon-woo-92610623b/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <a href="https://suketsu.itch.io/" target="_blank" rel="noopener" style="display:block;">
+              <!-- itch.io SVG Icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" style="margin-bottom:4px;">
+                <rect x="2" y="6" width="20" height="12" rx="3" fill="#fa5c5c"/>
+                <path d="M7 10h10v2a5 5 0 0 1-10 0v-2z" fill="#fff"/>
+              </svg>
+            </a>
+            <a href="https://suketsu.itch.io/" target="_blank" rel="noopener">itch.io</a>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <a href="https://kanghyeonwoo.portfoliobox.net/" target="_blank" rel="noopener" style="display:block;">
+              <!-- PortfolioBox SVG Icon (generic briefcase) -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" style="margin-bottom:4px;">
+                <rect x="3" y="7" width="18" height="13" rx="2" fill="#f59e0b"/>
+                <rect x="8" y="3" width="8" height="4" rx="1" fill="#fff"/>
+              </svg>
+            </a>
+            <a href="https://kanghyeonwoo.portfoliobox.net/" target="_blank" rel="noopener">PortfolioBox</a>
+          </div>
         </div>
       </div>
     </div>
@@ -188,8 +245,36 @@
     </div>
   </footer>
 
+  <!-- Floating Top Button -->
+  <a href="#top" id="topBtn" class="btn" style="position:fixed;right:32px;bottom:32px;z-index:1000;box-shadow:0 4px 16px rgba(0,0,0,.18);"> Back to Top ↑</a>
+
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Resume download confirmation
+    document.getElementById('resumeBtn').addEventListener('click', function(e) {
+      e.preventDefault();
+      if (confirm('Do you want to download the resume?')) {
+        window.location.href = 'files/Kyle Woo Resume.pdf';
+      }
+    });
   </script>
+  <style>
+    #topBtn {
+      transition: opacity 0.2s;
+      opacity: 0.85;
+    }
+    #topBtn:hover {
+      opacity: 1;
+    }
+    @media (max-width:600px) {
+      #topBtn {
+        right: 16px;
+        bottom: 16px;
+        padding: 10px 14px;
+        font-size: 1rem;
+      }
+    }
+  </style>
 </body>
 </html>
