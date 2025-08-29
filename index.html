@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kyle Woo | Game Designer & Producer</title>
+  <meta name="description" content="Portfolio of Kyle Woo – Game Designer/Producer & UI/UX, Unity/Unreal projects."/>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🎣%3C/text%3E%3C/svg%3E"/>
+  <style>
+    :root{
+      --bg:#0b0f19; --panel:#121827; --muted:#9aa4b2; --fg:#e5e7eb; --acc:#60a5fa; --acc2:#f59e0b; --card:#0f172a;
+      --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif;line-height:1.6}
+    a{color:var(--acc);text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1100px,92%);margin:0 auto}
+    header{position:sticky;top:0;background:rgba(11,15,25,.8);backdrop-filter:saturate(140%) blur(8px);z-index:50;border-bottom:1px solid rgba(255,255,255,.06)}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+    nav .brand{font-weight:800;letter-spacing:.3px}
+    nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
+    nav a:hover{opacity:.85}
+
+    .hero{padding:72px 0 36px;background:linear-gradient(180deg,rgba(96,165,250,.12),transparent)}
+    .hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:36px;align-items:center}
+    .eyebrow{color:var(--acc2);font-weight:700;text-transform:uppercase;letter-spacing:.18em;font-size:.8rem}
+    h1{font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.15;margin:.2em 0}
+    .lead{color:var(--muted);font-size:1.08rem;margin-top:.4rem}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{background:var(--acc);color:#06101e;border:0;padding:12px 16px;border-radius:12px;font-weight:700;box-shadow:var(--shadow)}
+    .btn.ghost{background:transparent;color:var(--fg);border:1px solid rgba(255,255,255,.15)}
+
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .tag{font-size:.78rem;color:#cbd5e1;border:1px solid rgba(255,255,255,.12);padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.03)}
+
+    section{padding:40px 0}
+    h2{font-size:1.6rem;margin:0 0 16px}
+
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .card{grid-column:span 12;background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    @media (min-width:800px){.card{grid-column:span 6}}
+    .card .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,rgba(96,165,250,.2),rgba(245,158,11,.2));display:flex;align-items:center;justify-content:center;font-size:48px}
+    .card .body{padding:18px}
+    .card h3{margin:0 0 6px}
+    .meta{color:var(--muted);font-size:.9rem}
+    .stack{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+    .stack .chip{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:8px;font-size:.78rem;color:#cbd5e1}
+
+    .about{display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+    .about .panel{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+    .about strong{color:#fff}
+    @media (max-width:860px){.hero .wrap,.about{grid-template-columns:1fr}}
+
+    .contact{display:grid;grid-template-columns:1.2fr 1fr;gap:18px}
+    .contact .panel{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:20px}
+
+    footer{padding:26px 0;border-top:1px solid rgba(255,255,255,.06);color:var(--muted);font-size:.92rem}
+    .social{display:flex;gap:14px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Kyle Woo</div>
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="container wrap">
+      <div>
+        <div class="eyebrow">Game Design • Production • UI/UX</div>
+        <h1>Hi, I’m <span style="color:var(--acc)">Kyle Woo</span> — a game designer & producer who loves clean systems, clear schedules, and dramatic boss fights.</h1>
+        <p class="lead">Unity & Unreal projects with a focus on player‑friendly UI, narrative beats, and reliable pipelines. Currently studying at UCF; building polished small‑scope experiences.</p>
+        <div class="tags">
+          <span class="tag">Unity (C#)</span><span class="tag">Unreal / Blueprints</span><span class="tag">Jira / Scrum</span><span class="tag">Shader Graph</span><span class="tag">Cinematics</span>
+        </div>
+        <div class="cta">
+          <a class="btn" href="#work">See Projects</a>
+          <a class="btn ghost" href="https://github.com/KyleWoo2619" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div>
+        <div class="panel" style="padding:22px">
+          <strong>Quick highlights</strong>
+          <ul>
+            <li>Producer/Director on <em>Horizon Angler</em> — a mystery fishing adventure with multi‑stage boss logic & save/progress systems.</li>
+            <li>Built UI flows, NPC interactions, shop systems, and cutscene transitions.</li>
+            <li>Experimented with water & light shaders reacting to player direction.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="container">
+      <h2>Selected Work</h2>
+      <div class="grid">
+        <!-- Project 1 -->
+        <article class="card">
+          <div class="thumb" aria-hidden="true">🎣</div>
+          <div class="body">
+            <h3>Horizon Angler — Mystery Fishing Adventure</h3>
+            <p class="meta">Producer / Director • Design & Gameplay Systems • Unity</p>
+            <p>Small‑scope adventure about time and a curse. Implemented saving/progress, NPC interaction trees, shopkeeper dialogue, and a multi‑phase anglerfish boss fight inspired by <em>Dredge</em> vibes.</p>
+            <div class="stack"><span class="chip">Unity (URP)</span><span class="chip">C#</span><span class="chip">Cinematics</span><span class="chip">Shader Graph</span></div>
+            <p style="margin-top:10px"><a href="#" target="_blank" rel="noopener">Trailer (soon)</a> · <a href="#" target="_blank" rel="noopener">Design notes</a></p>
+          </div>
+        </article>
+        <!-- Project 2 -->
+        <article class="card">
+          <div class="thumb" aria-hidden="true">🛠️</div>
+          <div class="body">
+            <h3>Steel Requiem — 3D Action Platformer (Prototype)</h3>
+            <p class="meta">Designer • Combat & Camera Pass • Narrative Direction</p>
+            <p>Steampunk aesthetic with explosive melee. Early prototype exploring dual‑protagonist narrative and philosophical questions about AI, meaning, and value.</p>
+            <div class="stack"><span class="chip">Unreal</span><span class="chip">Blueprints</span><span class="chip">Combat feel</span><span class="chip">Narrative</span></div>
+            <p style="margin-top:10px"><a href="#" target="_blank" rel="noopener">Prototype clip</a></p>
+          </div>
+        </article>
+        <!-- Project 3 -->
+        <article class="card">
+          <div class="thumb" aria-hidden="true">🛡️</div>
+          <div class="body">
+            <h3>Shield Down (VR) — Lab Project</h3>
+            <p class="meta">Contributor • Under faculty supervision • VR interactions</p>
+            <p>Side project focusing on interaction design & VR comfort. Iterated on role assignment, user feedback, and color hierarchy in HUD.</p>
+            <div class="stack"><span class="chip">Unity</span><span class="chip">OVR</span><span class="chip">UX</span></div>
+            <p style="margin-top:10px"><a href="#" target="_blank" rel="noopener">Notes</a></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container about">
+      <div class="panel">
+        <h2>About</h2>
+        <p>I’m a junior game design student at UCF who enjoys building clear production plans and approachable game loops. I like small, well‑scoped projects that ship.</p>
+        <p>Beyond design, I focus on pipelines: task breakdowns in Jira, clean Gantt timelines, and version‑control‑friendly workflows so teams don’t step on each other.</p>
+        <p><strong>Currently</strong> refining the post‑tutorial flow for <em>Horizon Angler</em> (shop scene, cutscene transitions, and boss setup).</p>
+        <p><a class="btn ghost" href="#" download>Download résumé (PDF)</a></p>
+      </div>
+      <div class="panel">
+        <h2>Skills & Tools</h2>
+        <ul>
+          <li><strong>Design:</strong> Systems, level flow, combat feel, narrative beats</li>
+          <li><strong>Production:</strong> Scrum, Jira, scope control, milestone planning</li>
+          <li><strong>Tech:</strong> Unity (C#), Unreal (Blueprints), Shader Graph, GitHub</li>
+          <li><strong>Art/UX:</strong> UI wireframes, layout, Photoshop, Illustrator</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container contact">
+      <div class="panel">
+        <h2>Contact</h2>
+        <p>Want to collaborate or chat about a project? Email me and I’ll get back soon.</p>
+        <p><a class="btn" href="mailto:kylewoo2619@gmail.com">kylewoo2619@gmail.com</a></p>
+      </div>
+      <div class="panel">
+        <h2>Links</h2>
+        <div class="social">
+          <a href="https://github.com/KyleWoo2619" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="#top">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div>© <span id="y"></span> Kyle Woo. Built for GitHub Pages.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
