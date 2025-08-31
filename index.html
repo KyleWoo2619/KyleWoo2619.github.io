@@ -122,21 +122,42 @@
   </header>
 
   <section class="hero" id="top" style="padding:0;margin:0;">
-    <!-- Banner -->
-    <div style="width:100%;background:linear-gradient(90deg,#60a5fa 0%,#f59e0b 100%);padding:64px 0 64px 0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
-      <h1 style="font-size:3.6rem;font-weight:900;letter-spacing:1px;color:#fff;margin:0 0 18px 0;text-shadow:0 2px 24px rgba(0,0,0,.18);text-align:center;">Kyle Woo</h1>
-      <div style="font-size:1.45rem;color:#fff;font-weight:600;text-align:center;max-width:600px;margin-bottom:18px;text-shadow:0 2px 12px rgba(0,0,0,.10);">
-        Ambitious Producer & Game Designer
-      </div>
-      <div style="font-size:1.08rem;color:#f3f4f6;text-align:center;max-width:700px;margin-bottom:46px;">
-        Building polished, player-focused experiences with a love for clean systems, clear schedules, and dramatic boss fights.
+    <!-- Banner Slideshow -->
+    <div id="banner-slideshow" style="width:100%;height:320px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(90deg,#60a5fa 0%,#f59e0b 100%);">
+      <img src="images/banner/1.jpg" alt="Banner 1" class="banner-slide is-active" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s;opacity:1;z-index:0;">
+      <img src="images/banner/2.jpg" alt="Banner 2" class="banner-slide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s;opacity:0;z-index:0;">
+      <img src="images/banner/3.jpg" alt="Banner 3" class="banner-slide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s;opacity:0;z-index:0;">
+      <img src="images/banner/4.jpg" alt="Banner 4" class="banner-slide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s;opacity:0;z-index:0;">
+      <img src="images/banner/5.jpg" alt="Banner 5" class="banner-slide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s;opacity:0;z-index:0;">
+      <img src="images/banner/6.jpg" alt="Banner 6" class="banner-slide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s;opacity:0;z-index:0;">
+      <img src="images/banner/7.jpg" alt="Banner 7" class="banner-slide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s;opacity:0;z-index:0;">
+      <img src="images/banner/8.jpg" alt="Banner 8" class="banner-slide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s;opacity:0;z-index:0;">
+      <img src="images/banner/9.jpg" alt="Banner 9" class="banner-slide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s;opacity:0;z-index:0;">
+      <img src="images/banner/10.jpg" alt="Banner 10" class="banner-slide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s;opacity:0;z-index:0;">
+      <img src="images/banner/11.jpg" alt="Banner 11" class="banner-slide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s;opacity:0;z-index:0;">
+      <img src="images/banner/12.jpg" alt="Banner 12" class="banner-slide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s;opacity:0;z-index:0;">
+      <img src="images/banner/13.jpg" alt="Banner 13" class="banner-slide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s;opacity:0;z-index:0;">
+      <img src="images/banner/14.jpg" alt="Banner 14" class="banner-slide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s;opacity:0;z-index:0;">
+      <img src="images/banner/15.jpg" alt="Banner 15" class="banner-slide" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s;opacity:0;z-index:0;">
+      <!-- Dark overlay for text readability -->
+      <div class="banner-overlay" style="position:absolute;inset:0;width:100%;height:100%;background:rgba(20,24,31,0.38);z-index:1;pointer-events:none;"></div>
+      <!-- Banner Text Content (overlay) -->
+      <div style="position:relative;z-index:2;width:100%;padding:64px 0 64px 0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+        <h1 style="font-size:3.6rem;font-weight:900;letter-spacing:1px;color:#fff;margin:0 0 18px 0;text-shadow:0 2px 24px rgba(0,0,0,.18);text-align:center;">Kyle Woo</h1>
+        <div style="font-size:1.45rem;color:#fff;font-weight:600;text-align:center;max-width:600px;margin-bottom:18px;text-shadow:0 2px 12px rgba(0,0,0,.10);">
+          Ambitious Producer & Game Designer
+        </div>
+        <div style="font-size:1.08rem;color:#f3f4f6;text-align:center;max-width:700px;margin-bottom:46px;">
+          Building polished, player-focused experiences with a love for clean systems, clear schedules, and dramatic boss fights.
+        </div>
       </div>
     </div>
     <!-- Add About Section Anchor -->
     <span id="about"></span>
-    <!-- Left-oriented About Section with left padding for visual centering -->
-    <div class="container" style="display:flex;flex-direction:column;align-items:flex-start;justify-content:center;margin-top:90px;">
-      <div style="max-width:1010px;text-align:center;padding-left:90px;">
+    <!-- Profile Image Above About Me -->
+    <div class="container" style="display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:90px;">
+      <img src="images/kyle-woo.jpg" alt="Kyle Woo Portrait" style="width:340px;max-width:100%;height:auto;object-fit:cover;border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,.18);margin-bottom:32px;">
+      <div style="max-width:1010px;text-align:center;margin:0 auto;">
         <h2 style="margin-bottom:16px;">About Me</h2>
         <p>I am a senior game design student at UCF with a passion for building engaging gameplay and leading teams toward clear goals. My focus lies in creating systems that feel intuitive for players while keeping production organized and achievable for teams.</p>
         <p>As a producer, I’ve managed projects across Unity and Unreal, using Scrum and Jira to keep milestones on track. As a designer, I enjoy exploring player motivation, level progression, and boss encounters that challenge both mechanically and narratively. As a leader, I’ve guided teams of various sizes by promoting collaboration, conflict resolution, and clear communication.</p>
@@ -179,15 +200,18 @@
       <div class="grid">
         <!-- Shield Down -->
         <article class="card">
-          <a class="carousel project-link" href="https://your-shield-down-link.com" aria-label="Open Shield Down">
-            <img src="images/shield-down/1.jpg" alt="Shield Down screenshot 1" loading="lazy">
-            <img src="images/shield-down/2.jpg" alt="Shield Down screenshot 2" loading="lazy">
-            <img src="images/shield-down/3.jpg" alt="Shield Down screenshot 3" loading="lazy">
+          <a class="carousel project-link" href="https://github.com/many-realities-studio/shields-down" aria-label="Open Shields Down">
+            <img src="images/shields-down/1.png" alt="Shields Down screenshot 1" loading="lazy">
+            <img src="images/shields-down/2.png" alt="Shields Down screenshot 2" loading="lazy">
+            <img src="images/shields-down/3.png" alt="Shields Down screenshot 3" loading="lazy">
+            <img src="images/shields-down/4.png" alt="Shields Down screenshot 4" loading="lazy">
+            <img src="images/shields-down/5.png" alt="Shields Down screenshot 5" loading="lazy">
+            <img src="images/shields-down/6.png" alt="Shields Down screenshot 6" loading="lazy">
           </a>
           <div class="body">
-            <h3>Shield Down — VR Electronic Literature</h3>
+            <h3>Shields Down — VR Electronic Literature (In Progress)</h3>
             <p class="meta">Project Manager / Programmer / Tech Artist • Unity VR</p>
-            <p>Balanced small‑team upgrades in Jira, improved visuals with VFX and lighting, and expanded narrative‑driven atmosphere. Delivered polished build that earned strong feedback.</p>
+            <p>Balanced small-team upgrades in Jira, enhanced visuals with lighting, VFX, and atmosphere, and expanded narrative-driven design. Currently refining post-production, fixing bugs, and preparing for app store submission.</p>
             <div class="stack"><span class="chip">Unity</span><span class="chip">VR</span><span class="chip">Post‑processing</span></div>
           </div>
         </article>
@@ -296,7 +320,7 @@
     <div class="container contact">
       <div class="panel">
         <h2>Contact</h2>
-        <p style="margin-bottom:22px;">Want to collaborate or chat about a project? Email me and I’ll get back soon.</p>
+        <p style="margin-bottom:22px;">Got a question, an idea, or just want to say hi? My inbox is always open.</p>
         <p> 
           <a class="btn" href="mailto:wkhgate2619@gmail.com">wkhgate2619@gmail.com</a>
           <span style="display:inline-block;width:8px;"></span>
@@ -377,6 +401,31 @@
         }
       });
     });
+
+    // Banner slideshow (auto, slower interval, random start)
+    (function () {
+      const INTERVAL_MS = 6000; // 6 seconds per banner
+      const slides = Array.from(document.querySelectorAll('.banner-slide'));
+      let i = Math.floor(Math.random() * slides.length); // random start index
+
+      // Hide all, show random
+      slides.forEach((img, idx) => {
+        img.classList.remove('is-active');
+        img.style.opacity = 0;
+      });
+      slides[i].classList.add('is-active');
+      slides[i].style.opacity = 1;
+
+      if (slides.length > 1) {
+        setInterval(() => {
+          slides[i].classList.remove('is-active');
+          slides[i].style.opacity = 0;
+          i = (i + 1) % slides.length;
+          slides[i].classList.add('is-active');
+          slides[i].style.opacity = 1;
+        }, INTERVAL_MS);
+      }
+    })();
   </script>
   <style>
     #topBtn {
