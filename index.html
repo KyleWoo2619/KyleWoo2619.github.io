@@ -38,13 +38,21 @@
     h2{font-size:1.6rem;margin:0 0 16px}
 
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
-    .card{grid-column:span 12;background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .card{grid-column:span 12;background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display: flex;flex-direction: column;height: 100%;}
     @media (min-width:800px){.card{grid-column:span 6}}
     .card .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,rgba(96,165,250,.2),rgba(245,158,11,.2));display:flex;align-items:center;justify-content:center;font-size:48px}
-    .card .body{padding:18px}
-    .card h3{margin:0 0 6px}
+    .card .body{padding:18px;flex: 1 1 auto;display: flex;flex-direction: column;}
+    .card h3{margin:0 0 0px}
+    .card .body p {
+      margin-top: 6px;
+      margin-bottom: 7px;
+    }
     .meta{color:var(--muted);font-size:.9rem}
-    .stack{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+    .meta {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+    .stack{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0;margin-top: auto;}
     .stack .chip{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:8px;font-size:.78rem;color:#cbd5e1}
 
     .about{display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
@@ -228,7 +236,12 @@
           </a>
           <div class="body">
             <h3>Shields Down — VR Electronic Literature (In Progress)</h3>
-            <p class="meta">Project Manager / Programmer / Tech Artist • Unity VR</p>
+            <p class="meta" style="display:flex;align-items:center;gap:8px;">
+              Project Manager / Programmer / Tech Artist • Unity VR
+              <span class="chip" style="margin-left:auto;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:8px;font-size:.78rem;color:#cbd5e1;display:inline-block;vertical-align:middle;">
+                5–6 mo, small team
+              </span>
+            </p>
             <p>Balanced small-team upgrades in Jira, enhanced visuals with lighting, VFX, and atmosphere, and expanded narrative-driven design. Currently refining post-production, fixing bugs, and preparing for app store submission.</p>
             <div class="stack"><span class="chip">Unity</span><span class="chip">VR</span><span class="chip">Post‑processing</span></div>
           </div>
@@ -244,7 +257,12 @@
           </a>
           <div class="body">
             <h3>Horizon Angler — Mystery Fishing Adventure</h3>
-            <p class="meta">Producer / Programmer / Tech Artist • Unity</p>
+            <p class="meta" style="display:flex;align-items:center;gap:8px;">
+              Producer / Programmer / Tech Artist • Unity
+              <span class="chip" style="margin-left:auto;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:8px;font-size:.78rem;color:#cbd5e1;display:inline-block;vertical-align:middle;">
+                4 weeks, 7 members
+              </span>
+            </p>
             <p>Directed overall design and narrative while programming UI, saving, NPCs, and a multi‑phase boss fight. Built shaders and rigged the final boss, learning scoping and leadership through conflict resolution.</p>
             <div class="stack"><span class="chip">Unity</span><span class="chip">C#</span><span class="chip">Shaders</span><span class="chip">Animation</span></div>
           </div>
@@ -260,7 +278,12 @@
           </a>
           <div class="body">
             <h3>Graveyard Shift — Stealth Horror Game</h3>
-            <p class="meta">Producer / AI Programmer • Unreal</p>
+            <p class="meta" style="display:flex;align-items:center;gap:8px;">
+              Producer / AI Programmer • Unreal
+              <span class="chip" style="margin-left:auto;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:8px;font-size:.78rem;color:#cbd5e1;display:inline-block;vertical-align:middle;">
+                4 weeks, 6 members
+              </span>
+            </p>
             <p>Led production while designing enemy AI with behavior trees. Built gameplay systems in Unreal and integrated mocap animations for responsive, immersive enemies.</p>
             <div class="stack"><span class="chip">Unreal</span><span class="chip">AI Programming</span><span class="chip">Animation</span></div>
           </div>
@@ -275,7 +298,12 @@
           </a>
           <div class="body">
             <h3>Knightline Combat — Tactical Shooter</h3>
-            <p class="meta">Producer / Programmer • Unreal</p>
+            <p class="meta" style="display:flex;align-items:center;gap:8px;">
+              Producer / Programmer • Unreal
+              <span class="chip" style="margin-left:auto;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:8px;font-size:.78rem;color:#cbd5e1;display:inline-block;vertical-align:middle;">
+                2 weeks, 6 members
+              </span>
+            </p>
             <p>Directed milestones and team productivity while coding enemy AI and accessible UI systems. Strengthened leadership through structured PM practices.</p>
             <div class="stack"><span class="chip">Unity</span><span class="chip">UI Programming</span><span class="chip">AI Programming</span></div>
           </div>
@@ -291,7 +319,12 @@
           </a>
           <div class="body">
             <h3>Underneath the Thread — VR Murder Mystery</h3>
-            <p class="meta">Project Manager / Programmer • Unity VR</p>
+            <p class="meta" style="display:flex;align-items:center;gap:8px;">
+              Project Manager / Programmer • Unity VR
+              <span class="chip" style="margin-left:auto;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:8px;font-size:.78rem;color:#cbd5e1;display:inline-block;vertical-align:middle;">
+                4 weeks, 9 members
+              </span>
+            </p>
             <p>Coordinated a 9‑person team to deliver a complete VR game in one month, ensuring smooth progress through organized tasks and milestones.</p>
             <div class="stack"><span class="chip">Unity</span><span class="chip">VR</span><span class="chip">Team Leadership</span></div>
           </div>
@@ -308,7 +341,12 @@
           </a>
           <div class="body">
             <h3>Sundered Veil — Digital Souls‑like Board Game</h3>
-            <p class="meta">Project Manager</p>
+            <p class="meta" style="display:flex;align-items:center;gap:8px;">
+              Project Manager
+              <span class="chip" style="margin-left:auto;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:8px;font-size:.78rem;color:#cbd5e1;display:inline-block;vertical-align:middle;">
+                4 weeks, 6 members
+              </span>
+            </p>
             <p>Applied advanced PM tools and scheduling to monitor progress and ensure timely task completion in a digital board game project.</p>
             <div class="stack"><span class="chip">Project Management</span><span class="chip">Scheduling</span></div>
           </div>
@@ -325,7 +363,12 @@
           </a>
           <div class="body">
             <h3>Vivid Space — VR Interior Design App</h3>
-            <p class="meta">Producer / Programmer • Unity VR</p>
+            <p class="meta" style="display:flex;align-items:center;gap:8px;">
+              Producer / Programmer • Unity VR
+              <span class="chip" style="margin-left:auto;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:8px;font-size:.78rem;color:#cbd5e1;display:inline-block;vertical-align:middle;">
+                1 week, solo production
+              </span>
+            </p>
             <p>Led concept ideation and built a working VR prototype in one week as sole programmer, balancing technical and creative challenges.</p>
             <div class="stack"><span class="chip">Unity</span><span class="chip">VR</span><span class="chip">Prototyping</span></div>
           </div>
