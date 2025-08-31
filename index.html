@@ -75,6 +75,36 @@
     html {
       scroll-behavior: smooth;
     }
+
+    /* Carousel container matches your current 16:9 thumbnail area */
+    .carousel {
+      position: relative;
+      display: block;
+      aspect-ratio: 16 / 9;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(96,165,250,.2), rgba(245,158,11,.2));
+      cursor: pointer;
+    }
+
+    /* Stack all slides; fade the active one in */
+    .carousel img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity .6s ease;
+    }
+
+    /* JS will toggle this class */
+    .carousel img.is-active { opacity: 1; }
+
+    /* Respect users who prefer reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .carousel img { transition: none; }
+    }
   </style>
 </head>
 <body>
@@ -98,85 +128,164 @@
       <div style="font-size:1.45rem;color:#fff;font-weight:600;text-align:center;max-width:600px;margin-bottom:18px;text-shadow:0 2px 12px rgba(0,0,0,.10);">
         Ambitious Producer & Game Designer
       </div>
-      <div style="font-size:1.08rem;color:#f3f4f6;text-align:center;max-width:700px;margin-bottom:0 0 46px 0;">
+      <div style="font-size:1.08rem;color:#f3f4f6;text-align:center;max-width:700px;margin-bottom:46px;">
         Building polished, player-focused experiences with a love for clean systems, clear schedules, and dramatic boss fights.
       </div>
     </div>
     <!-- Add About Section Anchor -->
     <span id="about"></span>
-    <!-- Centered About Section -->
-    <div class="container" style="display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:90px;">
-      <div style="max-width:600px;text-align:center;">
-        <h2 style="margin-bottom:16px;">About</h2>
-        <p>I’m a junior game design student at UCF who enjoys building clear production plans and approachable game loops. I like small, well‑scoped projects that ship.</p>
-        <p>Beyond design, I focus on pipelines: task breakdowns in Jira, clean Gantt timelines, and version‑control‑friendly workflows so teams don’t step on each other.</p>
-        <p style="margin-bottom:22px;"><strong>Currently</strong> refining the post‑tutorial flow for <em>Horizon Angler</em> (shop scene, cutscene transitions, and boss setup).</p>
+    <!-- Left-oriented About Section with left padding for visual centering -->
+    <div class="container" style="display:flex;flex-direction:column;align-items:flex-start;justify-content:center;margin-top:90px;">
+      <div style="max-width:1010px;text-align:center;padding-left:90px;">
+        <h2 style="margin-bottom:16px;">About Me</h2>
+        <p>I am a senior game design student at UCF with a passion for building engaging gameplay and leading teams toward clear goals. My focus lies in creating systems that feel intuitive for players while keeping production organized and achievable for teams.</p>
+        <p>As a producer, I’ve managed projects across Unity and Unreal, using Scrum and Jira to keep milestones on track. As a designer, I enjoy exploring player motivation, level progression, and boss encounters that challenge both mechanically and narratively. As a leader, I’ve guided teams of various sizes by promoting collaboration, conflict resolution, and clear communication.</p>
+        <p style="margin-bottom:22px;">I thrive in environments where creativity meets structure — where ideas become polished, playable experiences delivered on time.</p>
         <p style="margin-top:32px;">
-          <a class="btn ghost" href="#" id="resumeBtn" style="display:inline-block;margin:0 auto;">Download my Résumé (PDF)</a>
+          <a class="btn ghost" href="#" id="resumeBtn" style="display:inline-block;">Download my Résumé (PDF)</a>
         </p>
       </div>
     </div>
-    <!-- Quick Highlights and Skills/Tools side by side, no borders -->
-    <div class="container" style="margin-top:38px;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:38px;max-width:1100px;margin:0 auto;">
-        <div>
-          <h2 style="margin-bottom:16px;">Quick Highlights</h2>
-          <ul>
-            <li>Unity & Unreal projects with a focus on player‑friendly UI, narrative beats, and reliable pipelines.</li>
-            <li>Task breakdowns in Jira, clean Gantt timelines, and version‑control‑friendly workflows.</li>
-            <li>Currently refining the post‑tutorial flow for <em>Horizon Angler</em> (shop scene, cutscene transitions, and boss setup).</li>
-          </ul>
-        </div>
-        <div>
-          <h2 style="margin-bottom:16px;">Skills & Tools</h2>
-          <ul>
-            <li><strong>Design:</strong> Systems, level flow, combat feel, narrative beats</li>
-            <li><strong>Production:</strong> Scrum, Jira, scope control, milestone planning</li>
-            <li><strong>Tech:</strong> Unity (C#), Unreal (Blueprints), Shader Graph, GitHub</li>
-            <li><strong>Art/UX:</strong> UI wireframes, layout, Photoshop, Illustrator</li>
-          </ul>
-        </div>
+    <!-- Left-oriented Quick Highlights and Skills & Tools stacked with left padding -->
+    <div class="container" style="margin-top:38px;display:flex;flex-direction:column;align-items:flex-start;">
+      <div style="max-width:1010px;text-align:left;padding-left:90px;">
+        <h2 style="margin-bottom:16px;">Quick Highlights</h2>
+        <ul>
+          <li>Produced and directed multiple team projects from concept to delivery, balancing creative ambition with practical scope.</li>
+          <li>Experienced with Unity (C#) and Unreal (Blueprints), including gameplay systems, AI, shaders, and cinematics.</li>
+          <li>Strong project management skills: Jira workflows, Scrum sprints, Gantt scheduling, and milestone planning.</li>
+          <li>Collaborative leader who prioritizes communication, efficiency, and supporting teammates’ strengths.</li>
+        </ul>
+      </div>
+      <div style="max-width:1010px;text-align:left;margin-top:32px;padding-left:90px;">
+        <h2 style="margin-bottom:16px;">Skills &amp; Tools</h2>
+        <ul>
+          <li><strong>Production &amp; Leadership:</strong> Project Management, Agile/Scrum, Jira, ClickUp, Scope Control, Workflow Facilitation, Conflict Resolution, Team Leadership, Documentation</li>
+          <li><strong>Technical:</strong> Unity (C#, Shader Graph), Unreal Engine (Blueprints, C++), GitHub, AI Programming, Python, HTML, CSS</li>
+          <li><strong>Design:</strong> Narrative Design, Gameplay Systems, Level Flow, Combat Feel, Cinematic Sequencing, Creative Problem Solving</li>
+          <li><strong>Visual Design &amp; Communication:</strong> Digital design, Website design, Layout systems, Presentation design, Logo design, UI design, Branding consistency, Storytelling through visuals</li>
+          <li><strong>Art &amp; UX:</strong> UI Wireframes &amp; Layout, Photoshop, Illustrator, Premiere Pro, Blender, ZBrush, Perspective Drawing</li>
+          <li><strong>Languages:</strong> Korean (Native), English (Fluent), Japanese (Proficient)</li>
+        </ul>
       </div>
     </div>
 
   <section id="projects">
-    <!-- Spacer to prevent header overlap when navigating -->
+    <!-- Spacer to offset sticky header -->
     <div style="height:45px;"></div>
     <span id="projects"></span>
     <div class="container">
       <h2>Proud Projects</h2>
       <div class="grid">
-        <!-- Project 1 -->
+        <!-- Shield Down -->
         <article class="card">
-          <div class="thumb" aria-hidden="true">🎣</div>
+          <a class="carousel project-link" href="https://your-shield-down-link.com" aria-label="Open Shield Down">
+            <img src="images/shield-down/1.jpg" alt="Shield Down screenshot 1" loading="lazy">
+            <img src="images/shield-down/2.jpg" alt="Shield Down screenshot 2" loading="lazy">
+            <img src="images/shield-down/3.jpg" alt="Shield Down screenshot 3" loading="lazy">
+          </a>
+          <div class="body">
+            <h3>Shield Down — VR Electronic Literature</h3>
+            <p class="meta">Project Manager / Programmer / Tech Artist • Unity VR</p>
+            <p>Balanced small‑team upgrades in Jira, improved visuals with VFX and lighting, and expanded narrative‑driven atmosphere. Delivered polished build that earned strong feedback.</p>
+            <div class="stack"><span class="chip">Unity</span><span class="chip">VR</span><span class="chip">Post‑processing</span></div>
+          </div>
+        </article>
+        <!-- Horizon Angler -->
+        <article class="card">
+          <a class="carousel project-link" href="https://suketsu.itch.io/horizon-angler" aria-label="Open Horizon Angler">
+            <img src="images/horizon-angler/1.png" alt="Horizon Angler screenshot 1" loading="lazy">
+            <img src="images/horizon-angler/2.png" alt="Horizon Angler screenshot 2" loading="lazy">
+            <img src="images/horizon-angler/3.png" alt="Horizon Angler screenshot 3" loading="lazy">
+            <img src="images/horizon-angler/4.png" alt="Horizon Angler screenshot 4" loading="lazy">
+            <img src="images/horizon-angler/5.png" alt="Horizon Angler screenshot 5" loading="lazy">
+          </a>
           <div class="body">
             <h3>Horizon Angler — Mystery Fishing Adventure</h3>
-            <p class="meta">Producer / Director • Design & Gameplay Systems • Unity</p>
-            <p>Small‑scope adventure about time and a curse. Implemented saving/progress, NPC interaction trees, shopkeeper dialogue, and a multi‑phase anglerfish boss fight inspired by <em>Dredge</em> vibes.</p>
-            <div class="stack"><span class="chip">Unity (URP)</span><span class="chip">C#</span><span class="chip">Cinematics</span><span class="chip">Shader Graph</span></div>
-            <p style="margin-top:10px"><a href="#" target="_blank" rel="noopener">Trailer (soon)</a> · <a href="#" target="_blank" rel="noopener">Design notes</a></p>
+            <p class="meta">Producer / Programmer / Tech Artist • Unity</p>
+            <p>Directed overall design and narrative while programming UI, saving, NPCs, and a multi‑phase boss fight. Built shaders and rigged the final boss, learning scoping and leadership through conflict resolution.</p>
+            <div class="stack"><span class="chip">Unity</span><span class="chip">C#</span><span class="chip">Shaders</span><span class="chip">Animation</span></div>
           </div>
         </article>
-        <!-- Project 2 -->
+        <!-- Graveyard Shift -->
         <article class="card">
-          <div class="thumb" aria-hidden="true">🛠️</div>
+          <a class="carousel project-link" href="https://raeandrite.itch.io/graveyard-shift" aria-label="Open Graveyard Shift">
+            <img src="images/graveyard-shift/1.png" alt="Graveyard Shift screenshot 1" loading="lazy">
+            <img src="images/graveyard-shift/2.jpg" alt="Graveyard Shift screenshot 2" loading="lazy">
+            <img src="images/graveyard-shift/3.jpg" alt="Graveyard Shift screenshot 3" loading="lazy">
+            <img src="images/graveyard-shift/4.jpg" alt="Graveyard Shift screenshot 4" loading="lazy">
+            <img src="images/graveyard-shift/5.jpg" alt="Graveyard Shift screenshot 5" loading="lazy">
+          </a>
           <div class="body">
-            <h3>Steel Requiem — 3D Action Platformer (Prototype)</h3>
-            <p class="meta">Designer • Combat & Camera Pass • Narrative Direction</p>
-            <p>Steampunk aesthetic with explosive melee. Early prototype exploring dual‑protagonist narrative and philosophical questions about AI, meaning, and value.</p>
-            <div class="stack"><span class="chip">Unreal</span><span class="chip">Blueprints</span><span class="chip">Combat feel</span><span class="chip">Narrative</span></div>
-            <p style="margin-top:10px"><a href="#" target="_blank" rel="noopener">Prototype clip</a></p>
+            <h3>Graveyard Shift — Stealth Horror Game</h3>
+            <p class="meta">Producer / AI Programmer • Unreal</p>
+            <p>Led production while designing enemy AI with behavior trees. Built gameplay systems in Unreal and integrated mocap animations for responsive, immersive enemies.</p>
+            <div class="stack"><span class="chip">Unreal</span><span class="chip">AI Programming</span><span class="chip">Animation</span></div>
           </div>
         </article>
-        <!-- Project 3 -->
+        <!-- Knightline Combat -->
         <article class="card">
-          <div class="thumb" aria-hidden="true">🛡️</div>
+          <a class="carousel project-link" href="https://suketsu.itch.io/knightline-combat" aria-label="Open Knightline Combat">
+            <img src="images/knightline-combat/1.png" alt="Knightline Combat screenshot 1" loading="lazy">
+            <img src="images/knightline-combat/2.png" alt="Knightline Combat screenshot 2" loading="lazy">
+            <img src="images/knightline-combat/3.png" alt="Knightline Combat screenshot 3" loading="lazy">
+            <img src="images/knightline-combat/4.png" alt="Knightline Combat screenshot 4" loading="lazy">
+          </a>
           <div class="body">
-            <h3>Shield Down (VR) — Lab Project</h3>
-            <p class="meta">Contributor • Under faculty supervision • VR interactions</p>
-            <p>Side project focusing on interaction design & VR comfort. Iterated on role assignment, user feedback, and color hierarchy in HUD.</p>
-            <div class="stack"><span class="chip">Unity</span><span class="chip">OVR</span><span class="chip">UX</span></div>
-            <p style="margin-top:10px"><a href="#" target="_blank" rel="noopener">Notes</a></p>
+            <h3>Knightline Combat — Tactical Shooter</h3>
+            <p class="meta">Producer / Programmer • Unreal</p>
+            <p>Directed milestones and team productivity while coding enemy AI and accessible UI systems. Strengthened leadership through structured PM practices.</p>
+            <div class="stack"><span class="chip">Unity</span><span class="chip">UI Programming</span><span class="chip">AI Programming</span></div>
+          </div>
+        </article>
+        <!-- Underneath the Thread -->
+        <article class="card">
+          <a class="carousel project-link" href="https://suketsu.itch.io/underneath-the-thread" aria-label="Open Underneath the Thread">
+            <img src="images/underneath-the-thread/1.png" alt="Underneath the Thread screenshot 1" loading="lazy">
+            <img src="images/underneath-the-thread/2.png" alt="Underneath the Thread screenshot 2" loading="lazy">
+            <img src="images/underneath-the-thread/3.png" alt="Underneath the Thread screenshot 3" loading="lazy">
+            <img src="images/underneath-the-thread/4.png" alt="Underneath the Thread screenshot 4" loading="lazy">
+            <img src="images/underneath-the-thread/5.png" alt="Underneath the Thread screenshot 5" loading="lazy">
+          </a>
+          <div class="body">
+            <h3>Underneath the Thread — VR Murder Mystery</h3>
+            <p class="meta">Project Manager / Programmer • Unity VR</p>
+            <p>Coordinated a 9‑person team to deliver a complete VR game in one month, ensuring smooth progress through organized tasks and milestones.</p>
+            <div class="stack"><span class="chip">Unity</span><span class="chip">VR</span><span class="chip">Team Leadership</span></div>
+          </div>
+        </article>
+        <!-- Sundered Veil -->
+        <article class="card">
+          <a class="carousel project-link" href="https://suketsu.itch.io/sundered-veil" aria-label="Open Sundered Veil">
+            <img src="images/sundered-veil/1.png" alt="Sundered Veil screenshot 1" loading="lazy">
+            <img src="images/sundered-veil/2.png" alt="Sundered Veil screenshot 2" loading="lazy">
+            <img src="images/sundered-veil/3.png" alt="Sundered Veil screenshot 3" loading="lazy">
+            <img src="images/sundered-veil/4.png" alt="Sundered Veil screenshot 4" loading="lazy">
+            <img src="images/sundered-veil/5.png" alt="Sundered Veil screenshot 5" loading="lazy">
+            <img src="images/sundered-veil/6.png" alt="Sundered Veil screenshot 6" loading="lazy">
+          </a>
+          <div class="body">
+            <h3>Sundered Veil — Digital Souls‑like Board Game</h3>
+            <p class="meta">Project Manager</p>
+            <p>Applied advanced PM tools and scheduling to monitor progress and ensure timely task completion in a digital board game project.</p>
+            <div class="stack"><span class="chip">Project Management</span><span class="chip">Scheduling</span></div>
+          </div>
+        </article>
+        <!-- Vivid Space -->
+        <article class="card">
+          <a class="carousel project-link" href="https://www.youtube.com/watch?v=DyBOKMRaEv4" aria-label="Open Vivid Space">
+            <img src="images/vivid-space/1.png" alt="Vivid Space screenshot 1" loading="lazy">
+            <img src="images/vivid-space/2.png" alt="Vivid Space screenshot 2" loading="lazy">
+            <img src="images/vivid-space/3.png" alt="Vivid Space screenshot 3" loading="lazy">
+            <img src="images/vivid-space/4.png" alt="Vivid Space screenshot 4" loading="lazy">
+            <img src="images/vivid-space/5.png" alt="Vivid Space screenshot 5" loading="lazy">
+            <img src="images/vivid-space/6.png" alt="Vivid Space screenshot 6" loading="lazy">
+          </a>
+          <div class="body">
+            <h3>Vivid Space — VR Interior Design App</h3>
+            <p class="meta">Producer / Programmer • Unity VR</p>
+            <p>Led concept ideation and built a working VR prototype in one week as sole programmer, balancing technical and creative challenges.</p>
+            <div class="stack"><span class="chip">Unity</span><span class="chip">VR</span><span class="chip">Prototyping</span></div>
           </div>
         </article>
       </div>
@@ -258,6 +367,16 @@
         window.location.href = 'files/Kyle Woo Resume.pdf';
       }
     });
+
+    // Project icon link confirmation (for both .project-link and .carousel)
+    document.querySelectorAll('.project-link, .carousel').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (confirm('You will be redirected to a new page. Continue?')) {
+          window.open(link.href, '_blank');
+        }
+      });
+    });
   </script>
   <style>
     #topBtn {
@@ -276,5 +395,56 @@
       }
     }
   </style>
+  <script>
+  (function () {
+    const INTERVAL_MS = 3000; // change slide every 3s
+
+    document.querySelectorAll('.carousel').forEach(carousel => {
+      const slides = Array.from(carousel.querySelectorAll('img'));
+      if (slides.length <= 1) { slides[0]?.classList.add('is-active'); return; }
+
+      let i = 0, timer = null;
+
+      // Always show first image by default
+      slides.forEach(img => img.classList.remove('is-active'));
+      slides[0].classList.add('is-active');
+
+      const showSlide = idx => {
+        slides.forEach(img => img.classList.remove('is-active'));
+        slides[idx].classList.add('is-active');
+      };
+
+      const next = () => {
+        slides[i].classList.remove('is-active');
+        i = (i + 1) % slides.length;
+        slides[i].classList.add('is-active');
+      };
+
+      const start = () => {
+        if (timer) return;
+        timer = setInterval(next, INTERVAL_MS);
+      };
+
+      const stop = () => {
+        clearInterval(timer);
+        timer = null;
+        i = 0;
+        showSlide(0); // Reset to first image
+      };
+
+      carousel.addEventListener('mouseenter', () => {
+        start();
+        // Immediately show next slide on hover
+        next();
+      });
+      carousel.addEventListener('mouseleave', stop);
+      carousel.addEventListener('focusin', () => {
+        start();
+        next();
+      });
+      carousel.addEventListener('focusout', stop);
+    });
+  })();
+  </script>
 </body>
 </html>
